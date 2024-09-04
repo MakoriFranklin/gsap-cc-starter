@@ -1,5 +1,28 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 const GsapFromTo = () => {
   // TODO: Implement the gsap.fromTo() method
+  useGSAP(()=> {
+    gsap.fromTo('#red-box',{
+      x:0,
+      rotation: 0,
+      borderRadius: '0%',
+      background: 'green'
+    }, 
+    {
+      x: 250,
+      repeat: -1,
+      background: 'red',
+      yoyo: true,
+      rotate: 360,
+      borderRadius: '100%',
+      ease: 'bounceOunt',
+      duration: 2,
+      
+
+    })
+  }, [])
 
   return (
     <main>
